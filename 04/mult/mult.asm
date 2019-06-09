@@ -7,3 +7,30 @@
 // (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)
 
 // Put your code here.
+
+@sum
+M=0 //somewhere in ram is assigned sum as 0
+@i
+M=1 
+
+(LOOP)
+@i
+D=M //D=i
+@R0
+D=D-M //D=i-R0
+@END
+D;JGT //jump if D>0 == i-R0>0
+@R1
+D=M //D=R1
+@sum
+M=M+D //sum +=R1
+@i
+M=M+1
+@LOOP
+0;JMP //Unconditional jump
+
+(END)
+@sum
+D=M 
+@R2
+M=D //RAM[R2]=sum
