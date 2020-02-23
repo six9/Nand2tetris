@@ -27,7 +27,7 @@ M=M+D //sum +=R1
 @i
 M=M+1
 @LOOP
-0;JMP //Unconditional jump
+0;JMP //Unconditional jump to LOOP
 
 (END)
 @sum
